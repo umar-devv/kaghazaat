@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaghazaat — Know exactly what to bring</title>
+<meta name="description" content="Search any government task in Pakistan and get the exact document checklist, fees, and processing time — nothing missing, nothing extra.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<!-- Structured Data for SEO (Tells Google this is for Pakistan) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Kaghazaat",
+  "description": "Pakistan government document checklists.",
+  "url": "https://your-github-username.github.io/kaghazaat/",
+  "inLanguage": "en",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Pakistani Citizens"
+  }
+}
+</script>
+
+</head>
+<body>
+ 
+  <div class="topbar">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none"><rect x="4" y="3" width="20" height="26" fill="#F8F3E6" stroke="#22283B" stroke-width="1.6"/><line x1="8" y1="10" x2="20" y2="10" stroke="#22283B" stroke-width="1.3"/><line x1="8" y1="14" x2="20" y2="14" stroke="#22283B" stroke-width="1.3"/><line x1="8" y1="18" x2="16" y2="18" stroke="#22283B" stroke-width="1.3"/><circle cx="22" cy="22" r="7" fill="none" stroke="#B4402A" stroke-width="1.6"/><path d="M19 22l2 2 4-4" stroke="#B4402A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="brand-name">Kaghazaat<span>.</span></div>
+    </div>
+    <nav>
+      <a onclick="scrollToId('categories')">Categories</a>
+      <a onclick="scrollToId('about')">About</a>
+    </nav>
+  </div>
+ 
+  <!-- Top banner: replaced ad with quick tips -->
+  <div class="ad-slot banner tip-banner">
+    <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; justify-content:center; width:100%;">
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; color:var(--stamp-red); letter-spacing:.08em;">📋 BEFORE YOU GO</span>
+      <span style="font-size:14px; color:var(--ink);">✓ Check timings &nbsp;|&nbsp; ✓ Bring originals &nbsp;|&nbsp; ✓ Carry extra photocopies &nbsp;|&nbsp; ✓ Reach before 11 AM</span>
+    </div>
+  </div>
+ 
+  <!-- ===================== HOME / HERO ===================== -->
+  <div id="home-view">
+    <div class="hero">
+      <div class="form-frame">
+        <div class="form-row"><span>Form No. KZ-01</span><span>Applicant: You</span></div>
+        
+        <!-- UPDATED: Clean Headline + Visual Pakistan Badge -->
+        <h1>What are you filing for today?</h1>
+        <div class="country-badge">🇵🇰 Pakistan</div>
+        
+        <!-- UPDATED: Subtly includes "in Pakistan" for SEO -->
+        <p class="sub">Search any government task in Pakistan — passport, CNIC, license, domicile — and get the exact list of documents you need. No guessing, no missing paperwork.</p>
+        
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#22283B" stroke-width="1.8"/><line x1="21" y1="21" x2="16.2" y2="16.2" stroke="#22283B" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <input id="search-input" type="text" placeholder="Try “passport renewal” or “child B-Form”…" autocomplete="off">
+          <div class="search-results" id="search-results"></div>
+        </div>
+        <div class="stamp-count">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#3C6B52" stroke-width="1.6"/><path d="M8 12l3 3 5-6" stroke="#3C6B52" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span id="checklist-total-count">— checklists ready, updated for 2026</span>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="section-head" id="categories">
+      <div>
+        <span class="eyebrow">Browse by office</span>
+        <h2>Pick a category</h2>
+      </div>
+    </div>
+    <div class="grid" id="category-grid"></div>
+ 
+    <!-- In-content: replaced ad with Did You Know? -->
+    <div class="ad-slot in-content fact-box">
+      <div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap; justify-content:center;">
+        <span style="font-size:32px;">💡</span>
+        <div>
+          <h4 style="font-family:'Special Elite',monospace; font-size:18px; margin:0 0 6px; color:var(--ink);">Did you know?</h4>
+          <p style="margin:0; font-size:14px; color:var(--ink-soft);">Most government offices in Pakistan are busiest between 10 AM – 12 PM. Arrive at 8:30 AM to get your work done in under 1 hour.</p>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="section-head" id="about" style="margin-top:10px;">
+      <div>
+        <span class="eyebrow">Why this exists</span>
+        <!-- UPDATED: Added "in Pakistan" -->
+        <h2>Built because official checklists in Pakistan are scattered and outdated</h2>
+      </div>
+    </div>
+    <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); padding-bottom:40px;">
+      <div class="tab-card" style="cursor:default;" data-tab="01">
+        <h3>Nothing missing</h3>
+        <p>Every checklist is grouped into required and situational documents, so you're not guessing what applies to you.</p>
+      </div>
+      <div class="tab-card" style="cursor:default;" data-tab="02">
+        <h3>Nothing extra</h3>
+        <p>No sign-up, no app download. Search, check off, print — done in under a minute.</p>
+      </div>
+      <div class="tab-card" style="cursor:default;" data-tab="03">
+        <h3>Print-ready</h3>
+        <p>Take a clean, stamped copy of your checklist to the office instead of a screenshot.</p>
+      </div>
+    </div>
+ 
+<footer>
+  <!-- UPDATED: Added "for Pakistan" -->
+  <div class="eyebrow">Kaghazaat — a paperwork checklist reference for Pakistan.<br>Fees and processing times change often — always confirm with the relevant Pakistani office before you go.</div>
+  <div class="eyebrow">Made for people standing in line, not filling out forms twice.</div>
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/mumarafzall" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+      </svg>
+    </a>
+    <a href="https://github.com/umar-devv" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+      </svg>
+    </a>
+  </div>
+</footer>
+
+  </div>
+ 
+  <!-- ===================== CHECKLIST VIEW ===================== -->
+  <div class="checklist-view" id="checklist-view">
+    <button class="back-link" onclick="goHome()">&larr; Back to categories</button>
+ 
+    <div class="checklist-head">
+      <div>
+        <span class="eyebrow" id="cl-eyebrow">Category</span>
+        <h1 id="cl-title">Title</h1>
+      </div>
+    </div>
+ 
+    <div class="variant-tabs" id="cl-variant-tabs"></div>
+ 
+    <div class="checklist-body">
+      <div>
+        <div class="info-strip" id="cl-info-strip"></div>
+ 
+        <div class="progress-line">
+          <span id="progress-label">0 / 0 collected</span>
+          <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+ 
+        <ul class="doc-list" id="doc-list"></ul>
+ 
+        <div class="actions">
+          <button class="btn" onclick="window.print()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9V3h12v6M6 18H4a1 1 0 01-1-1v-6a1 1 0 011-1h16a1 1 0 011 1v6a1 1 0 01-1 1h-2M6 14h12v7H6v-7z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            Print checklist
+          </button>
+          <button class="btn ghost" onclick="resetChecklist()">Reset checks</button>
+        </div>
+ 
+        <p class="disclaimer">Fees, office locations, and processing times vary by city and change periodically — this list covers standard requirements. Confirm current fees at your nearest office before applying.</p>
+      </div>
+ 
+      <div>
+        <div class="sidebar-box">
+          <h4>Good to know</h4>
+          <ul id="cl-tips"></ul>
+        </div>
+        <!-- Sidebar: replaced ad with Quick Links -->
+        <div class="ad-slot sidebar quick-links">
+          <h4 style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; margin:0 0 14px; color:var(--ink-soft);">⚡ Quick Links</h4>
+          <ul>
+            <li><a href="https://www.nadra.gov.pk" target="_blank">NADRA Official Portal →</a></li>
+            <li><a href="https://www.passport.gov.pk" target="_blank">Passport Office →</a></li>
+            <li><a href="https://www.fbr.gov.pk" target="_blank">FBR Tax Portal →</a></li>
+            <li><a href="https://www.secp.gov.pk" target="_blank">SECP Business Registration →</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+<script src="script.js"></script>
+</body>
+</html>
